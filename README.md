@@ -1,9 +1,17 @@
+https://forums.cncnet.org/index.php?topic=7211
+
 # bloglachen
 //===================== Start Material List =========================
         var reqmateriallist = {};
         // $scope.plantCode = null;
         $scope.locationCode = null;
-        $scope.groupCode = null;
+        $scope.groupCode = nul
+            if (typeof location != 'undefined' && location != null && location != '') {
+                $scope.locationCode = location.locationCode;
+                if ($rootScope.locationCode != 'undefined' && $rootScope.locationCode != null && $rootScope.locationCode != '') {
+                    //   if ($scope.locationCode != $rootScope.locationCode && $rootScope.totalmaterial > 0) {
+                    if ($scope.locationCode != $rootScope.locationCode && $rootScope.materialrequests.length > 0) {
+l;
         $scope.materiallistdatas = null;
 
         $scope.checkcriteria = function(location, group, action) {
@@ -11,12 +19,6 @@
             //     $scope.plantCode = plant.plantCode;
             // }
             console.log(location);
-            if (typeof location != 'undefined' && location != null && location != '') {
-                $scope.locationCode = location.locationCode;
-                if ($rootScope.locationCode != 'undefined' && $rootScope.locationCode != null && $rootScope.locationCode != '') {
-                    //   if ($scope.locationCode != $rootScope.locationCode && $rootScope.totalmaterial > 0) {
-                    if ($scope.locationCode != $rootScope.locationCode && $rootScope.materialrequests.length > 0) {
-
                         SweetAlert.swal({
                                 title: "การเปลี่ยนคลังสินค้าต้องทำการยกเลิกอุปกรณ์ทั้งหมด?",
                                 text: "",
